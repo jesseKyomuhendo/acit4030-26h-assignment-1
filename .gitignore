@@ -220,3 +220,6 @@ __marimo__/
 #Track "data" folder but ignore its content
 data/*
 !data/.gitkeep
+
+#Ignore "output" folder
+/output/
