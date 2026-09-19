@@ -9,9 +9,34 @@ data:
   class_names: ["bathtub", "clock", "cellphone", "display", "laptop"]
   mesh_file: "model_normalized.obj"
   voxel_file: "model_normalized.solid.binvox"
+  num_workers: 2
 
 split:
   file: "splits.csv"
   train: 0.70
   val: 0.15        # test gets the rest (0.15)
   seed: 42
+
+training:
+  batch_size: 32
+  dropout: 0.3
+  epochs: 30
+  lr: 0.001
+  seed: 0
+
+output:
+  path: "output"
+
+voxel_cnn:
+  resolution: 32
+  channels: [16, 32, 64]     # one conv block per number
+  fc_dim: 128
+
+mesh_gcn:
+  hidden_dims: [64, 128, 256]    # one graph convolution per number
+  fc_dim: 128
+
+pointnet:
+  num_points: 1024
+  mlp_dims: [64, 128, 1024]      # shared MLP applied to every point
+  head_dims: [512, 256]          # classifier after max pooling
