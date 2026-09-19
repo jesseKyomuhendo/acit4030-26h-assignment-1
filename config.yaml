@@ -1,4 +1,17 @@
-
 #Test Section
 test-block:
   message: "Configurations loaded successfully."
+
+data:
+  path: "data"
+  # keep the quotes, otherwise YAML drops the leading zero
+  synsets: ["02808440", "03046257", "02992529", "03211117", "03642806"]
+  class_names: ["bathtub", "clock", "cellphone", "display", "laptop"]
+  mesh_file: "model_normalized.obj"
+  voxel_file: "model_normalized.solid.binvox"
+
+split:
+  file: "splits.csv"
+  train: 0.70
+  val: 0.15        # test gets the rest (0.15)
+  seed: 42
