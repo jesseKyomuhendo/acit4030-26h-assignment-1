@@ -5,4 +5,6 @@ scikit-learn
 matplotlib
 torchinfo
 
-#install "torch", but not need on Colab
+
+# torch and pytorch3d are not listed here, see the README for how to install them
+# Colab already has torch, and pytorch3d is built from source
