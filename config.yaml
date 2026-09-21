@@ -4,7 +4,7 @@ test-block:
 
 data:
   path: "data"
-  # keep the quotes, otherwise YAML drops the leading zero
+  # keep the quotes
   synsets: ["02808440", "03046257", "02992529", "03211117", "03642806"]
   class_names: ["bathtub", "clock", "cellphone", "display", "laptop"]
   mesh_file: "model_normalized.obj"
