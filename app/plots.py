@@ -83,7 +83,8 @@ def figure2(path):
 
 #Figure 3: confusion matrices
 def figure3(path):
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    # constrained_layout spaces the panels so the labels do not overlap
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5), constrained_layout=True)
     for i in range(len(NAMES)):
         files = glob.glob(str(CSV_PATH / ("confusion_matrix_" + NAMES[i] + "_seed*.csv")))
         if len(files) == 0:
